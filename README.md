@@ -1,36 +1,118 @@
 # 🎮 Online Tic-Tac-Toe
 
-A simple **2-player Online Tic-Tac-Toe** game written in **Python** using the **socket** module. One player hosts the game (Server) and the other joins (Client). Players take turns over a local network (LAN).
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&pause=1000&color=00C853&center=true&vCenter=true&width=800&lines=Online+Tic-Tac-Toe;Python+Socket+Programming;Offline+%26+Online+Version;Made+by+Srish+Ghosh">
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
+![Socket](https://img.shields.io/badge/Socket-TCP-success?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+
+</p>
+
+<p align="center">
+<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="600">
+</p>
 
 ---
 
-## ✨ Features
+# 📖 About
 
-- 🎲 Two-player gameplay
-- 🌐 Play over a local network using sockets
-- 🖥️ Terminal-based interface
-- 🚀 Lightweight and beginner-friendly
-- 📚 Great project for learning Python socket programming
+Online Tic-Tac-Toe is a beginner-friendly Python project that demonstrates how to build both an **Offline** and **Online Multiplayer** Tic-Tac-Toe game.
+
+The online version uses Python's built-in **socket** module to allow two players to play over a Local Area Network (LAN), while the offline version supports two players on the same computer and includes voice announcements and winner storage.
+
+This project is ideal for beginners who want to learn:
+
+- Python
+- Socket Programming
+- Client-Server Architecture
+- Basic Networking
+- CSV File Handling
+- Text-to-Speech
 
 ---
 
-## 📂 Project Structure
+# ✨ Features
+
+✅ Offline Tic-Tac-Toe
+
+✅ Online Multiplayer (LAN)
+
+✅ Client-Server Architecture
+
+✅ Voice Announcements (pyttsx3)
+
+✅ Winner saved as CSV
+
+✅ Lightweight
+
+✅ Beginner Friendly
+
+✅ Easy to Understand Code
+
+---
+
+# 🎯 Available Versions
+
+## 🎮 Offline Version
+
+Run
+
+```bash
+python "tik tak toe.py"
+```
+
+Features
+
+- Two players on one computer
+- Voice announcements
+- Winner saved to `tic_tac_toe.csv`
+
+---
+
+## 🌐 Online Version
+
+Run
+
+```bash
+python server.py
+```
+
+on one computer.
+
+Run
+
+```bash
+python client.py
+```
+
+on another computer connected to the same Wi-Fi.
+
+---
+
+# 📂 Project Structure
 
 ```text
 Online-Tik-Tac-Toe/
-│── server.py      # Host the game
-│── client.py      # Join the game
+│── server.py
+│── client.py
+│── tik tak toe.py
+│── requirements.txt
 │── README.md
 ```
 
 ---
 
-## 📋 Requirements
+# 📋 Requirements
 
-- Python 3.8 or later
-- Git (to clone the repository)
-
-No external Python libraries are required.
+- Python 3.8+
+- Git
+- pip
 
 ---
 
@@ -38,24 +120,14 @@ No external Python libraries are required.
 
 ## Windows
 
-1. Download Git from:
+Download Git
 
-   https://git-scm.com/download/win
+https://git-scm.com/download/win
 
-2. Run the installer.
-
-3. Keep the default installation settings.
-
-4. Verify Git is installed:
+Verify installation
 
 ```bash
 git --version
-```
-
-Example output:
-
-```text
-git version 2.50.1.windows.1
 ```
 
 ---
@@ -65,12 +137,6 @@ git version 2.50.1.windows.1
 ```bash
 sudo apt update
 sudo apt install git
-```
-
-Verify:
-
-```bash
-git --version
 ```
 
 ---
@@ -93,35 +159,23 @@ sudo pacman -S git
 
 ## macOS
 
-Using Homebrew:
-
 ```bash
 brew install git
 ```
 
-Or install Apple's Command Line Tools:
+or
 
 ```bash
 xcode-select --install
 ```
 
-Verify:
-
-```bash
-git --version
-```
-
 ---
 
-# 📥 Clone the Repository
-
-Open Command Prompt, PowerShell, Terminal, or Git Bash and run:
+# 📥 Clone Repository
 
 ```bash
 git clone https://github.com/developer-srish/Online-Tik-Tac-Toe.git
 ```
-
-Go into the project folder:
 
 ```bash
 cd Online-Tik-Tac-Toe
@@ -129,17 +183,49 @@ cd Online-Tik-Tac-Toe
 
 ---
 
-# ▶️ Running the Game
+# 📦 Install Dependencies
 
-## Step 1: Start the Server
+```bash
+pip install -r requirements.txt
+```
 
-On the computer that will host the game:
+or
+
+```bash
+pip install pandas pyttsx3
+```
+
+---
+# ▶️ Running the Project
+
+## 🎮 Offline Version
+
+Run the offline version using:
+
+```bash
+python "tik tak toe.py"
+```
+
+### Features
+
+- 👥 Two players on the same computer
+- 🔊 Voice announcements
+- 💾 Automatically saves the winner
+- 🎯 Beginner-friendly
+
+---
+
+## 🌐 Online Multiplayer Version
+
+### Step 1 — Start the Server
+
+On the host computer run:
 
 ```bash
 python server.py
 ```
 
-The server will display:
+Output:
 
 ```text
 Waiting for a connection...
@@ -147,7 +233,7 @@ Waiting for a connection...
 
 ---
 
-## Step 2: Find the Server IP Address
+### Step 2 — Find Your IP Address
 
 ### Windows
 
@@ -155,10 +241,10 @@ Waiting for a connection...
 ipconfig
 ```
 
-Look for something like:
+Example:
 
 ```text
-IPv4 Address . . . . . : 192.168.1.5
+IPv4 Address. . . . . . . . . : 192.168.1.5
 ```
 
 ---
@@ -177,27 +263,27 @@ ifconfig
 
 ---
 
-## Step 3: Start the Client
+### Step 3 — Connect the Client
 
-On the second computer:
+On another computer connected to the same Wi-Fi:
 
 ```bash
 python client.py
 ```
 
-Enter the server's IP address when asked.
-
 Example:
 
 ```text
-Enter Server IP: 192.168.1.5
+Server IP: 192.168.1.5
 ```
+
+The client will connect automatically.
 
 ---
 
 # 🎮 How to Play
 
-The board positions are:
+The board uses the following positions.
 
 ```text
 1 | 2 | 3
@@ -207,59 +293,130 @@ The board positions are:
 7 | 8 | 9
 ```
 
-- Server plays as **X**
-- Client plays as **O**
-- Enter a number from **1** to **9** to place your mark.
-- The first player to get three in a row wins.
+Example
+
+If you enter
+
+```text
+5
+```
+
+the board becomes
+
+```text
+1 | 2 | 3
+--+---+--
+4 | X | 6
+--+---+--
+7 | 8 | 9
+```
+
+The first player to make
+
+- Three rows
+- Three columns
+- Three diagonally
+
+wins the game.
 
 ---
 
-# 🛠 Technologies Used
+# 🏆 Features Comparison
 
-- Python
+| Feature | Offline | Online |
+|----------|:-------:|:------:|
+| Two Players | ✅ | ✅ |
+| LAN Multiplayer | ❌ | ✅ |
+| Voice Announcement | ✅ | ❌ |
+| Save Winner to CSV | ✅ | ❌ |
+| Python Sockets | ❌ | ✅ |
+
+---
+
+# 📁 Output
+
+## Winner CSV
+
+After a player wins, the offline version creates:
+
+```text
+tic_tac_toe.csv
+```
+
+Example
+
+```csv
+Winner
+x
+```
+
+---
+
+# 💡 Technologies Used
+
+- 🐍 Python
+- 🌐 Socket Programming
+- 📊 pandas
+- 🔊 pyttsx3
+- 📄 CSV Files
+
+---
+
+# 📚 What You'll Learn
+
+- Python Basics
 - Socket Programming
+- Client-Server Communication
+- Text-to-Speech
+- CSV File Handling
+- Game Logic
+- Console Applications
 
 ---
 
-# 🤝 Contributing
+# ⭐ Show Your Support
 
-Contributions are welcome!
+If you enjoyed this project or found it helpful, please consider giving it a ⭐ on GitHub.
 
-1. Fork this repository.
-2. Create a new branch.
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push to GitHub.
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request.
+It helps more people discover the project and motivates me to build more open-source projects.
 
 ---
+# 📜 License
 
-# 📝 License
+This project is licensed under the **MIT License**.
 
-This project is licensed under the MIT License.
+Feel free to use, modify, and distribute this project.
 
 ---
 
 # 👨‍💻 Author
 
-**Srish Ghosh**
+<p align="center">
 
-GitHub: https://github.com/developer-srish
+## **Srish Ghosh**
+
+Python Developer • Open Source Enthusiast • Student
+
+GitHub:
+
+**https://github.com/developer-srish**
+
+</p>
 
 ---
 
-⭐ If you like this project, don't forget to star the repository!
+<p align="center">
+
+## ⭐ Don't forget to Star this Repository!
+
+If you enjoyed this project or found it useful, please consider giving it a ⭐ on GitHub.
+
+It helps support the project and encourages future development.
+
+<img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" width="300">
+
+### Made with ❤️ in Python
+
+## Happy Coding! 🚀
+
+</p>
