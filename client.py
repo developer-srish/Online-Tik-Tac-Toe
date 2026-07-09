@@ -1,4 +1,12 @@
 import socket
+import time
+import builtins
+def print(*args, delay=0.06, end="\n"):
+    text = " ".join(str(arg) for arg in args)
+    for char in text:
+        builtins.print(char, end="", flush=True)
+        time.sleep(delay)
+    builtins.print(end=end, flush=True)
 
 board = ["1","2","3","4","5","6","7","8","9"]
 
