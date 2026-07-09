@@ -1,82 +1,205 @@
 # 🎮 Online Tic-Tac-Toe
 
-A simple **2-player online Tic-Tac-Toe game** written in Python using the `socket` module. One player hosts the game (Server) and the other joins (Client). Players take turns over a local network.
+A simple **2-player Online Tic-Tac-Toe** game written in **Python** using the **socket** module. One player hosts the game (Server) and the other joins (Client). Players take turns over a local network (LAN).
+
+---
 
 ## ✨ Features
 
 - 🎲 Two-player gameplay
-- 🌐 Online play using Python sockets
+- 🌐 Play over a local network using sockets
 - 🖥️ Terminal-based interface
 - 🚀 Lightweight and beginner-friendly
-- 📚 Great project for learning socket programming
+- 📚 Great project for learning Python socket programming
+
+---
 
 ## 📂 Project Structure
 
-```
+```text
 Online-Tik-Tac-Toe/
 │── server.py      # Host the game
 │── client.py      # Join the game
 │── README.md
 ```
 
-## 📦 Requirements
+---
 
-- Python 3.x
+## 📋 Requirements
 
-No external libraries are required.
+- Python 3.8 or later
+- Git (to clone the repository)
 
-## ▶️ How to Run
+No external Python libraries are required.
 
-### 1. Clone the repository
+---
+
+# 📥 Install Git
+
+## Windows
+
+1. Download Git from:
+
+   https://git-scm.com/download/win
+
+2. Run the installer.
+
+3. Keep the default installation settings.
+
+4. Verify Git is installed:
+
+```bash
+git --version
+```
+
+Example output:
+
+```text
+git version 2.50.1.windows.1
+```
+
+---
+
+## Ubuntu / Debian
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+Verify:
+
+```bash
+git --version
+```
+
+---
+
+## Fedora
+
+```bash
+sudo dnf install git
+```
+
+---
+
+## Arch Linux
+
+```bash
+sudo pacman -S git
+```
+
+---
+
+## macOS
+
+Using Homebrew:
+
+```bash
+brew install git
+```
+
+Or install Apple's Command Line Tools:
+
+```bash
+xcode-select --install
+```
+
+Verify:
+
+```bash
+git --version
+```
+
+---
+
+# 📥 Clone the Repository
+
+Open Command Prompt, PowerShell, Terminal, or Git Bash and run:
 
 ```bash
 git clone https://github.com/developer-srish/Online-Tik-Tac-Toe.git
+```
+
+Go into the project folder:
+
+```bash
 cd Online-Tik-Tac-Toe
 ```
 
-### 2. Start the server
+---
+
+# ▶️ Running the Game
+
+## Step 1: Start the Server
+
+On the computer that will host the game:
 
 ```bash
 python server.py
 ```
 
-The server will wait for a player to connect.
+The server will display:
 
-### 3. Find the server's IP address
+```text
+Waiting for a connection...
+```
 
-Windows:
+---
+
+## Step 2: Find the Server IP Address
+
+### Windows
 
 ```bash
 ipconfig
 ```
 
-Linux/macOS:
+Look for something like:
 
-```bash
-ifconfig
+```text
+IPv4 Address . . . . . : 192.168.1.5
 ```
 
-or
+---
+
+### Linux
 
 ```bash
 ip addr
 ```
 
-### 4. Start the client
+or
+
+```bash
+ifconfig
+```
+
+---
+
+## Step 3: Start the Client
+
+On the second computer:
 
 ```bash
 python client.py
 ```
 
-Enter the server's IP address when prompted.
+Enter the server's IP address when asked.
 
-## 🎮 Gameplay
+Example:
 
-- The server plays as **X**
-- The client plays as **O**
-- Players take turns selecting positions from **1–9**
-
+```text
+Enter Server IP: 192.168.1.5
 ```
+
+---
+
+# 🎮 How to Play
+
+The board positions are:
+
+```text
 1 | 2 | 3
 --+---+--
 4 | 5 | 6
@@ -84,24 +207,59 @@ Enter the server's IP address when prompted.
 7 | 8 | 9
 ```
 
-## 🛠️ Technologies Used
+- Server plays as **X**
+- Client plays as **O**
+- Enter a number from **1** to **9** to place your mark.
+- The first player to get three in a row wins.
+
+---
+
+# 🛠 Technologies Used
 
 - Python
 - Socket Programming
 
-## 🤝 Contributing
+---
+
+# 🤝 Contributing
 
 Contributions are welcome!
 
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Open a Pull Request
+1. Fork this repository.
+2. Create a new branch.
 
-## 📄 License
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub.
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📝 License
 
 This project is licensed under the MIT License.
 
 ---
 
-Made with ❤️ by **Srish Ghosh**
+# 👨‍💻 Author
+
+**Srish Ghosh**
+
+GitHub: https://github.com/developer-srish
+
+---
+
+⭐ If you like this project, don't forget to star the repository!
