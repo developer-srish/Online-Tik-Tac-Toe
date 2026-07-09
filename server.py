@@ -21,14 +21,16 @@ while True:
     
     
     pos=int(input('Enter position for ' + 'x' + ': '))
-    if board[pos-1] == 'x' or board[pos-1] == 'o':
+    if board[pos-1] in ['x', 'o']:
         print('Invalid position')
+        break
     else:
         board[pos-1] = 'x'
+        print_board()
         conn.send(str(pos).encode())
     if (board[0] == board[1] == board[2]) or (board[3] == board[4] == board[5]) or (board[6] == board[7] == board[8]) or (board[0] == board[3] == board[6]) or (board[1] == board[4] == board[7]) or (board[2] == board[5] == board[8]) or (board[0] == board[4] == board[8]) or (board[2] == board[4] == board[6]):
         print('Player ' + 'x' + ' wins!')
-        pd.DataFrame(['x'], columns=['Winner']).to_csv('tic_tac_toe.csv', index=False, header=False)
+        pd.DataFrame(['x']).to_csv('winner.csv', index=False)
         break
     print("Waiting for other player...")
     print("Dont press anything until the other player has made their move.")
