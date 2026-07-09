@@ -415,7 +415,7 @@ It helps support the project and encourages future development.
 
 <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" width="300">
 
-### Made with ❤️ in Python
+### Made with ❤️ in Python By Srish Ghosh
 
 ## Happy Coding! 🚀
 
